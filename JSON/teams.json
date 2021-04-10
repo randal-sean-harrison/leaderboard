@@ -1,0 +1,55 @@
+{
+  "teams": [
+
+    {
+      "name": "Team Luke",
+      "number": 1,
+      "project": "Lorem ipsum..."
+    },
+    {
+      "name": "Team Han",
+      "number": 2,
+      "project": "Lorem ipsum..."
+    },
+    {
+      "name": "Team Leia",
+      "number": 3,
+      "project": "Lorem ipsum..."
+    },
+    {
+      "name": "Team Chewie",
+      "number": 4,
+      "project": "Lorem ipsum..."
+    },
+    {
+      "name": "Team R2D2",
+      "number": 5,
+      "project": "Lorem ipsum..."
+    },
+    {
+      "name": "Team Threepio",
+      "number": 6,
+      "project": "Lorem ipsum..."
+    },
+    {
+      "name": "Team Lando",
+      "number": 7,
+      "project": "Lorem ipsum..."
+    },
+    {
+      "name": "Team Rey",
+      "number": 8,
+      "project": "Lorem ipsum..."
+    },
+    {
+      "name": "Team Obi-wan",
+      "number": 9,
+      "project": "Lorem ipsum..."
+    },
+    {
+      "name": "Team Yoda",
+      "number": 10,
+      "project": "Lorem ipsum..."
+    }
+  ]
+}

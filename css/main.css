@@ -1,0 +1,148 @@
+:root {
+  /* colors */
+
+  --maroon: maroon;
+  --bright-blue: #007bff;
+  --alice-blue: aliceblue;
+  --footer-slate: #e6e8f1;
+  --white: white;
+  --slate-gray: lightslategray;
+  --silver: silver;
+  --graphite: #506578;
+  --trench-blue: #406885;
+  --chocolate: chocolate;
+
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Open Sans', "Arial", sans-serif !important;
+  color: var(--slate-gray);
+  font-size: 1rem;
+  /* background: #f6f7fb !important; */
+  background: var(--alice-blue) !important;
+  font-weight: 400;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.team-scores h5 {
+  font-size: 1.15rem;
+  color: var(--bright-blue);
+  cursor: pointer;
+}
+
+.team-number {
+  padding-right: 1rem;
+  border-right: 1px dotted var(--silver);
+  margin-right: 1rem;
+}
+
+.percentages {
+  text-align: center;
+  color: var(--silver);
+  font-size: .75rem !important;
+  margin-top: -.5rem;
+}
+
+p, li, input {
+  font-family: 'Open Sans', "Arial", sans-serif !important;
+  color: var(--slate-gray);
+  font-size: 1rem !important;
+}
+
+textarea {
+  font-family: 'Open Sans', "Arial", sans-serif !important;
+  color: var(--slate-gray) !important;
+  font-size: 1rem !important;
+}
+
+.list-group-item {
+  margin-bottom: 1.75rem;
+}
+
+.navbar {
+  padding: 1.25rem 2rem;
+}
+
+.navbar-toggler-icon {
+  color: var(--white);
+}
+
+.category {
+  font-variant: small-caps;
+
+}
+
+.w-15 {
+  width: 16%;
+}
+
+#teams {
+  margin-top: 3rem;
+}
+
+#instructions {
+  display: none;
+}
+
+#instructions-button .bi {
+  font-size: 2rem;
+}
+
+#instructions-button-text {
+  display: none;
+  font-size: 1.6rem;
+  margin-right: 1.25rem;
+  color: var(--bright-blue);
+}
+
+.total-score {
+  font-size: 2rem !important;
+  color: var(--trench-blue);
+}
+
+/* colors ---------------------------------------------- */
+
+.bright-blue {
+   color: var(--bright-blue) !important;
+ }
+.alice-blue {
+   color: var(--alice-blue) !important;
+ }
+
+ .bg-alice-blue {
+   background: var(--alice-blue);
+ }
+
+.footer-slate {
+   color: var(--footer-slate) !important;
+ }
+.white {
+   color: var(--white) !important;
+ }
+.slate-gray {
+   color: var(--slate-gray) !important;
+ }
+.silver {
+   color: var(--silver) !important;
+ }
+.graphite {
+   color: var(--graphite) !important;
+ }
+.trench-blue {
+   color: var(--trench-blue) !important;
+ }
+.chocolate {
+   color: var(--chocolate) !important;
+ }
+
+
+/* @media queries --------------------------------------------- */
+@media screen and (max-width: 1000px) {
+  .abbreviation {
+    display: none;
+  }
+}

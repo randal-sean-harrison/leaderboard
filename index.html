@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="img/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- jQuery UI css -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- Google font: Open Sans Pro -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome icon include -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+
+  <!-- Main local styles -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <title>Leaderboard</title>
+
+</head>
+
+<body>
+
+  <div id="navbar"></div>
+
+  <!-- Main content here -->
+  <div class="container-fluid" id="wrapper">
+    <div class="row">
+
+      <div class="col-12">
+        <p class="text-right p-4"><span id="instructions-button"><span id="instructions-button-text" class="mr-2">Instructions</span><i class="bi bi-info-circle pointer bright-blue"></i></p>
+        <div id="instructions">
+          <h1 class="display-4 page-header text-center mt-1">Instructions</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quae molestias ratione totam autem optio deleniti labore. Eveniet impedit, odio veniam illo consequatur repellendus. Quas tenetur inventore omnis iure. Cum!</p>
+        </div>
+        <!-- .instruction -->
+      </div>
+
+      <div class="col-12">
+
+        <ul class="list-group list-group-flush" id="teams">
+          <!-- The Resources -->
+
+          <script id="all-teams" type="text/template">
+            {{#teams}}
+              <li class="list-group-item shadow p-4" data-order="{{{number}}}" data-ranking="0">
+                <div class="row">
+                  <div class="col-12">
+                    <h5 class="chocolate"><span class="team-number">#{{number}}</span> {{name}}</h5>
+                    <p>{{project}}</p>
+                  </div>
+                  <div class="col-12">
+                    <form>
+                      <div class='form-group'><textarea class='form-control notes' name='team-1-notes' rows='2' placeholder='Type your notes here'></textarea></div>
+                    </form>
+                  </div>
+                  <div class="col-12 team-scores d-flex justify-content-between text-center">
+                    <div class="category w-15">
+                      <h5 class="category-description" data-description="innovation">i<span class="abbreviation">n</span>nov<span class="abbreviation">ation</span></h5>
+
+                      <div class="form-group">
+                        <input type="number" min="0" max="10" value="0" class="text-center form-control w-100 border-0 bg-light rounded-0 input-innovation">
+                      </div>
+                      <p class="percentages">0-10 | 30%</p>
+                    </div>
+                    <div class="category w-15">
+                      <h5 class="category-description" data-description="impact">impa<span class="abbreviation">ct</span></h5>
+
+                      <div class="form-group">
+                        <input type="number" min="0" max="10" value="0" class="text-center form-control w-100 border-0 bg-light rounded-0 input-impact">
+                      </div>
+                      <p class="percentages">0-10 | 30%</p>
+
+                    </div>
+                    <div class="category w-15">
+                      <h5 class="category-description" data-description="usability">usab<span class="abbreviation">ility</span></h5>
+
+                      <div class="form-group">
+                        <input type="number" min="0" max="10" value="0" class="text-center form-control w-100 border-0 bg-light rounded-0 input-usability">
+                      </div>
+                      <p class="percentages">0-10 | 15%</p>
+
+                    </div>
+                    <div class="category w-15">
+                      <h5 class="category-description" data-description="technical merit">tech<span class="abbreviation"> merit</span></h5>
+
+                      <div class="form-group">
+                        <input type="number" min="0" max="10" value="0" class="text-center form-control w-100 border-0 bg-light rounded-0 input-technical-merit">
+                      </div>
+                      <p class="percentages">0-10 | 15%</p>
+
+                    </div>
+                    <div class="category w-15">
+                      <h5 class="category-description" data-description="presentation">pres<span class="abbreviation">entation</span></h5>
+
+                      <div class="form-group">
+                        <input type="number" min="0" max="10" value="0" class="text-center form-control w-100 border-0 bg-light rounded-0 input-presentation">
+                      </div>
+                      <p class="percentages">0-10 | 10%</p>
+
+                    </div>
+                    <div class="category w-15 bg-alice-blue">
+                      <h5 class="chocolate">total</h5>
+                      <p class="total-score">0</p>
+                    </div>
+                  </div>
+
+                </div>
+              </li>
+            {{/teams}}
+          </script>
+
+
+        </ul>
+
+      </div>
+      <!-- col-12 -->
+    </div>
+    <!-- row -->
+
+    <div id="footer"></div>
+
+  </div>
+  <!-- wrapper -->
+
+  <div class="modal fade" id="description-modal" tabindex="-1" role="dialog" aria-labelledby="license-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title chocolate" id="description-title">This is open source software</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <p id="description-text"></p>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jquery JS minified -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <!-- jquery ui -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <!-- Mustache.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+
+  <!-- popper minified -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+  <!-- bootstrap JS minified -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <!-- Main local scripts -->
+  <script src="js/main.js"></script>
+
+  <script>
+    $(function() {
+
+      // Local page scripts here
+
+    });
+    // document.ready closes
+  </script>
+
+</body>
+
+</html>
