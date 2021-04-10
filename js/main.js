@@ -22,7 +22,7 @@ $(document).ready(function() {
 
   }
 
-  teamWriter("json/teams.json");
+  teamWriter("JSON/teams.json");
 
   // Calculate the totals -----------------------------------------------------
 
